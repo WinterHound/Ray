@@ -1,4 +1,16 @@
 * Ray
+
+** Requirements
+
+Install *tdlib* from your destro.
+
+** Build & Install
+
+#+BEGIN_EXAMPLE
+  stack build
+  stack install
+#+END_EXAMPLE
+
 ** Configuration
 
 Get *api_hash* and *api_id* from https://my.telegram.org/
