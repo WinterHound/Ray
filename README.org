@@ -46,3 +46,7 @@ maxQueueBoundForChat = 10000
 currentBotID = 01234356789
 
 #+END_SRC
+
+** Note
+
+The bot uses library from https://github.com/mejgun/haskell-tdlib.  
