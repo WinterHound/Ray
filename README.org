@@ -36,7 +36,8 @@ tdlibParameters = TdlibParameters
 
 botToken = "TOKEN"
 
-uploadUrl = "https://anonfiles.com/upload"
+-- Select one of the many upload api (ex : https://api.myfile.is/upload)
+uploadUrl = "https://api.anonfiles.com/upload"
 
 maxQueueBoundForChat = 10000
 
