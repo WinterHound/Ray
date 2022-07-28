@@ -1,0 +1,34 @@
+* Ray
+** Configuration
+
+Get *api_hash* and *api_id* from https://my.telegram.org/
+
+#+BEGIN_SRC haskell
+tdlibParameters = TdlibParameters
+    { ignore_file_names = Just False
+     , enable_storage_optimizer = Just True
+     , application_version = Just "0.1.0.0"
+     , system_version = Just "Unknown"
+     , device_model = Just "Server"
+     , system_language_code = Just "en"
+     , api_hash = Just "HASH"
+     , api_id = Just 12345678
+     , use_secret_chats = Just False
+     , use_message_database = Just True
+     , use_chat_info_database = Just True
+     , use_file_database = Just True
+     , files_directory = Just "tdlib_files"
+     , database_directory = Just "tdlib_db"
+     , use_test_dc = Just False
+    }
+
+botToken = "TOKEN"
+
+uploadUrl = "https://anonfiles.com/upload"
+
+maxQueueBoundForChat = 10000
+
+-- Bot ID that you are using
+currentBotID = 01234356789
+
+#+END_SRC
