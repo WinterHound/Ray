@@ -1,0 +1,91 @@
+name:                ray
+version:             0.1.0.0
+github:              "winterhound/ray"
+license:              LGPL-3
+author:              "WinterHound"
+maintainer:          "winterhound@yandex.ru"
+copyright:           "2022 WinterHound"
+synopsis:            Telegram Bot for uploading files to AnonFiles and its cousins
+category:            Web
+description:         Please see the README on GitHub at <https://github.com/am-bv/ray#readme>
+
+extra-source-files:
+  - README.org
+
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - aeson-pretty
+  - async
+  - bytestring
+  - conf
+  - directory
+  - haskell-tdlib
+  - http-client
+  - http-client-tls
+  - http-types
+  - microlens-aeson 
+  - microlens-platform
+  - mtl
+  - pretty-simple
+  - stm
+  - stm-chans
+  - template-haskell
+  - text
+  - time
+  - transformers
+  - wreq
+  - containers
+  - random
+  - bimap
+  - fmt
+# - lifted-async  
+# - stm-delay
+# - GenericPretty
+# - lens
+# - lens-aeson
+
+  
+library:
+  source-dirs: src
+  ghc-options:
+    - -fwarn-identities
+  generated-other-modules:
+    - Paths_ray
+  exposed-modules:
+    - Ray
+    - Ray.Conf
+    - Ray.TGBot
+    - Ray.TGBot.Handle
+    - Ray.TGBot.Types
+    - Ray.TGBot.Defaults
+    - Ray.TH
+    - Ray.TH.Data
+    - Ray.TH.Query
+    - Ray.TH.Utils
+    
+executables:
+  ray:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ray
+    generated-other-modules:
+      - Paths_ray
+
+
+tests:
+  ray-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - ray
